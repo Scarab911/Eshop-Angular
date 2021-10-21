@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Eshop-Angular';
+  public product: Product;
+  
+  public constructor(){
+    this.product = new Product('Xebec', 490)
+  }
+
+  public get shortDescription(): string {
+    return 'Tri-Screen | Portable Laptop Workstation'
+  }
+
 }
