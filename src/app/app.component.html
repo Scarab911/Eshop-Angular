@@ -1,52 +1,10 @@
-<header>
-  <div class="cart">
-    <img src="../assets/images/shopping-cart.png" alt="Cart" />
-    <div class="count">{{ product.count }}</div>
-  </div>
-</header>
-
-<div
-  class="product-container"
-  [ngClass]="{
-    discount: product.discount > 0
-  }"
->
-  <img src="../assets/images/xebec.png" alt="Xebec product" />
-
-  <div>
-    <h3>{{ product.name }}</h3>
-    <p class="short-description">{{ shortDescription }}</p>
-  </div>
-
-  <div class="price" *ngIf="product.discount === 0">{{ product.price }} $</div>
-  <div
-    class="price"
-    *ngIf="product.discount > 0"
-    [ngClass]="{
-      red: product.discount > 0
-    }"
-  >
-    {{ product.discountedPrice }} $
-  </div>
-
-  <button
-    class="add-product"
-    (click)="product.addItem()"
-    [ngClass]="{
-      discount: product.discount > 0
-    }"
-  >
-    add to cart
-  </button>
-
-  <button
-    class="remove-product"
-    (click)="product.removeItem()"
-    *ngIf="product.count > 0"
-    [ngClass]="{
-      discount: product.discount > 0
-    }"
-  >
-    remove from cart
-  </button>
-</div>
+<app-header></app-header>
+<!-- <app-product [product]="allProductsList[0]"></app-product>
+<app-product [product]="allProductsList[1]"></app-product>
+<app-product [product]="allProductsList[2]"></app-product>
+<app-product [product]="allProductsList[3]"></app-product>
+<app-product [product]="allProductsList[4]"></app-product> -->
+<app-product
+  *ngFor="let product of allProductsList"
+  [product]="product"
+></app-product>

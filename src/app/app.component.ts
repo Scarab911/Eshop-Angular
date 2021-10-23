@@ -8,14 +8,16 @@ import { Product } from './models/product';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public product: Product;
-  
-  public constructor(){
-    this.product = new Product('Xebec', 490)
-  }
+ public allProductsList: Product[];
 
-  public get shortDescription(): string {
-    return 'Tri-Screen | Portable Laptop Workstation'
-  }
+  constructor() {
 
+    this.allProductsList = [];
+
+    this.allProductsList.push(new Product('Kamuolys', 10))
+    this.allProductsList.push(new Product('Zoliapjove', 1210))
+    this.allProductsList.push(new Product('Staline Lempa', 15))
+    this.allProductsList.push(new Product('Dronas', 110))
+    this.allProductsList.push(new Product('Kryzius', 3))
+   }
 }
