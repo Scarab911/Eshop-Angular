@@ -3,16 +3,14 @@
     {{ product?.count }}
   </div>
 
-  <img [src]="product?.imgURL" alt="{{product?.name}}" />
+  <img [src]="product?.imgURL" alt="{{ product?.name }}" />
 
   <div class="product-info">
     <h3>{{ product?.name }}</h3>
     <p class="short-description">{{ product?.shortDesc }}</p>
   </div>
 
-  <div class="price">
-    {{ product!.price }}$
-  </div>
+  <div class="price">{{ product!.price }}$</div>
   <!-- <div
     class="price"
     *ngIf="product!.discount > 0"
@@ -23,8 +21,8 @@
     {{ product!.discountedPrice }} $
   </div> -->
 
-  <!-- <button class="add-product" (click)="onAddToCart.emit()">Add to cart</button> -->
-  <button class="add-product" (click)="product?.addItem()">
+  <!-- <button class="add-product" >Add to cart</button> -->
+  <button class="add-product" (click)="product?.addItem()" (click)="pushId.emit()">
     Add to cart
   </button>
 

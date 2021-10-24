@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
   public allProductsList?: Product[];
 
   @Input()
+  public selectedProductsIdList?: number[];
+
+  @Input()
   public cartCount?:number=0;
 
   constructor() { 
@@ -31,7 +34,7 @@ export class HeaderComponent implements OnInit {
 
   public showSelected(): void {
     console.log('tiri riri piri');
-    console.log(this.allProductsList);
+    console.log(this.selectedProductsIdList);
     
   }
 
