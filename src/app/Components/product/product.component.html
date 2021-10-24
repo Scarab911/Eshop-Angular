@@ -11,17 +11,12 @@
   </div>
 
   <div class="price">{{ product!.price }}$</div>
-  <!-- <div
-    class="price"
-    *ngIf="product!.discount > 0"
-    [ngClass]="{
-      red: product!.discount > 0
-    }"
-  >
-    {{ product!.discountedPrice }} $
+  <!-- <div class="price" *ngIf="product.discount > 0" [ngClass]="{
+      'red': product.discount > 0
+    }">
+    {{ product?.discountedPrice }} $
   </div> -->
 
-  <!-- <button class="add-product" >Add to cart</button> -->
   <button class="add-product" (click)="product?.addItem()" (click)="pushId.emit()">
     Add to cart
   </button>
