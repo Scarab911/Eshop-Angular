@@ -1,0 +1,5 @@
+<app-header [allProductsList]="allProductsList" [selectedProductsIdList]="selectedProductsIdList">
+</app-header>
+
+<app-product *ngFor="let product of allProductsList" [product]="product" (pushId)="pushProductId(product.id)">
+</app-product>

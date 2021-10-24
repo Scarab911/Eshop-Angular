@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product';
+import { Item } from 'src/app/models/item';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,7 @@ import { Product } from 'src/app/models/product';
 export class HeaderComponent implements OnInit {
 
   @Input()
-  public allProductsList?: Product[];
+  public allProductsList?: Item[];
 
   @Input()
   public selectedProductsIdList?: number[];
@@ -35,7 +35,6 @@ export class HeaderComponent implements OnInit {
   public showSelected(): void {
     console.log('tiri riri piri');
     console.log(this.selectedProductsIdList);
-    
   }
 
 }

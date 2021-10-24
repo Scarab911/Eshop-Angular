@@ -1,4 +1,4 @@
-export class Product {
+export class Item {
     public id: number;
     public name: string;
     public price: number;
@@ -14,7 +14,6 @@ export class Product {
         this.count = 0,
         this.shortDesc = shortDesc,
         this.imgURL = imgURL
-      
     }
 
     public addItem(): number {

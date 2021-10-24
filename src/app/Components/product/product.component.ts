@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from 'src/app/models/product';
+import { Item } from 'src/app/models/item';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +9,7 @@ import { Product } from 'src/app/models/product';
 export class ProductComponent implements OnInit {
 
 @Input()
-public product?: Product;
+public product?: Item;
 
 
 @Output()
