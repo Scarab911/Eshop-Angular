@@ -3,22 +3,23 @@ header {
   justify-content: flex-end;
   margin-top: 20px;
   padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   .cart {
     position: relative;
 
     img {
-      width: 50px;
+      width: 30px;
+      cursor: pointer;
     }
     .count {
       position: absolute;
-      top: 9px;
-      right: 15px;
-      color: hsl(0, 92%, 43%);
-      font-size: 1.2rem;
-      &.hidden {
-        display: none;
-      }
+      top: 4px;
+      right: 5px;
+      color: #d30909;
+      font-size: 15px;
     }
   }
 }

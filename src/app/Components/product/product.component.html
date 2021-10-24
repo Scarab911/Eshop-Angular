@@ -1,13 +1,18 @@
 <div class="product-container">
-  <div class="count">{{product?.count}}</div>
-  <img src=".\assets\images\xebec.png" alt="Xebec product" />
+  <div class="count">
+    {{ product?.count }}
+  </div>
 
-  <div>
+  <img [src]="product?.imgURL" alt="{{product?.name}}" />
+
+  <div class="product-info">
     <h3>{{ product?.name }}</h3>
     <p class="short-description">{{ product?.shortDesc }}</p>
   </div>
 
-  <div class="price">{{ product!.price }} $</div>
+  <div class="price">
+    {{ product!.price }}$
+  </div>
   <!-- <div
     class="price"
     *ngIf="product!.discount > 0"
@@ -18,9 +23,12 @@
     {{ product!.discountedPrice }} $
   </div> -->
 
-  <button class="add-product" (click)="product?.addItem()">Add to cart</button>
+  <!-- <button class="add-product" (click)="onAddToCart.emit()">Add to cart</button> -->
+  <button class="add-product" (click)="product?.addItem()">
+    Add to cart
+  </button>
 
-  <button class="remove-product" (click)="product?.removeItem()" *ngIf="product!.count > 0">
-    Remove from cart
+  <button class="remove-product" (click)="product?.removeItem()" [disabled]="product?.count === 0">
+    Remove
   </button>
 </div>

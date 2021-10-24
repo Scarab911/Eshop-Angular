@@ -1,9 +1,5 @@
-<app-header></app-header>
-<!-- <app-product [product]="allProductsList[0]"></app-product>
-<app-product [product]="allProductsList[1]"></app-product>
-<app-product [product]="allProductsList[2]"></app-product>
-<app-product [product]="allProductsList[3]"></app-product>
-<app-product [product]="allProductsList[4]"></app-product> -->
+<app-header [allProductsList]="allProductsList"></app-header>
+
 <app-product
   *ngFor="let product of allProductsList"
   [product]="product"

@@ -9,16 +9,29 @@ import { Product } from 'src/app/models/product';
 export class HeaderComponent implements OnInit {
 
   @Input()
-  public product?: Product;
-//   @Input()
-//   public name?: string;
-//   @Input()
-// public count?: number;
+  public allProductsList?: Product[];
+
+  @Input()
+  public cartCount?:number=0;
 
   constructor() { 
   }
 
   ngOnInit(): void {
+    
+  }
+
+  public get getOrderCount(): number{
+    let count=0;
+    this.allProductsList?.forEach((product)=>{
+      count+=product.count;
+    });
+    return count;
+  }
+
+  public showSelected(): void {
+    console.log('tiri riri piri');
+    console.log(this.allProductsList);
     
   }
 

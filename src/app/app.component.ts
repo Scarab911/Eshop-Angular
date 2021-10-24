@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from './models/product';
 
 
@@ -8,16 +8,30 @@ import { Product } from './models/product';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- public allProductsList: Product[];
 
+  public cartCount?: number=0;
+  public allProductsList: Product[];
+  public selectedProductsIdList: number [];
+  public id:number;
   constructor() {
+    this.id=0,
+    this.allProductsList = [],
+    this.selectedProductsIdList = [],
 
-    this.allProductsList = [];
+    this.allProductsList.push(new Product(this.id++,'Kamuolys', 10, 'Futbolo kamuolys size 5', '../../../assets/images/kamuolys.png'))
+    this.allProductsList.push(new Product(this.id++,'Zoliapjove', 1210, 'Superine mechanine kasilka', '../../../assets/images/zoliapjove.png'))
+    this.allProductsList.push(new Product(this.id++,'Lempa', 15,'Led staline lempa', '../../../assets/images/lempa.png'))
+    this.allProductsList.push(new Product(this.id++,'Dronas', 110, 'DJI super dronas', '../../../assets/images/dronas.png'))
+    this.allProductsList.push(new Product(this.id++,'Kryzius', 3, 'piestas kryzelis NFT', '../../../assets/images/kryzius.png'))
+  }
 
-    this.allProductsList.push(new Product('Kamuolys', 10))
-    this.allProductsList.push(new Product('Zoliapjove', 1210))
-    this.allProductsList.push(new Product('Staline Lempa', 15))
-    this.allProductsList.push(new Product('Dronas', 110))
-    this.allProductsList.push(new Product('Kryzius', 3))
-   }
+  // public increaseCartCount(): number {
+    
+  //   console.log('preke prideta', this.cartCount);
+  //   return (this.cartCount!)++
+  // }
+  // public parodyk(){
+  //   console.log(this.allProductsList);
+    
+  // }
 }

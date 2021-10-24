@@ -1,16 +1,19 @@
 export class Product {
+    public id: number;
     public name: string;
     public price: number;
     public count: number;
     // public discount: number;
     public shortDesc: string;
+    public imgURL: string;
 
-    public constructor(name: string, price: number){
+    public constructor(id:number, name: string, price: number, shortDesc: string, imgURL: string){
+        this.id = id,
         this.name = name,
         this.price = price,
         this.count = 0,
-        // this.discount = 50
-        this.shortDesc = 'Tri-Screen | Portable Laptop Workstation'
+        this.shortDesc = shortDesc,
+        this.imgURL = imgURL
       
     }
 
@@ -33,7 +36,5 @@ export class Product {
     //      return this.discount;
     // }
     
-    public get shortDescription(): string {
-    return 'Tri-Screen | Portable Laptop Workstation'
-    }
+    
 }
