@@ -18,11 +18,11 @@ export class ProductsComponent implements OnInit {
     this.allProductsList = [],
     this.selectedProductsIdList = [],
 
-    this.allProductsList.push(new Item(++this.id,'Kamuolys', 10, 'Futbolo kamuolys size 5', '../../../assets/images/kamuolys.png'))
-    this.allProductsList.push(new Item(++this.id,'Zoliapjove', 1210, 'Superine mechanine kasilka', '../../../assets/images/zoliapjove.png'))
-    this.allProductsList.push(new Item(++this.id,'Lempa', 15,'Led staline lempa', '../../../assets/images/lempa.png'))
-    this.allProductsList.push(new Item(++this.id,'Dronas', 110, 'DJI super dronas', '../../../assets/images/dronas.png'))
-    this.allProductsList.push(new Item(++this.id,'Kryzius', 3, 'piestas kryzelis NFT', '../../../assets/images/kryzius.png'))
+    this.allProductsList.push(new Item(++this.id,'Kamuolys', 10, 'Futbolo kamuolys size 5', '../../../assets/images/kamuolys.png',0))
+    this.allProductsList.push(new Item(++this.id,'Zoliapjove', 1210, 'Superine mechanine kasilka', '../../../assets/images/zoliapjove.png',50))
+    this.allProductsList.push(new Item(++this.id,'Lempa', 15,'Led staline lempa', '../../../assets/images/lempa.png',0))
+    this.allProductsList.push(new Item(++this.id,'Dronas', 110, 'DJI super dronas', '../../../assets/images/dronas.png',0))
+    this.allProductsList.push(new Item(++this.id,'Kryzius', 3, 'piestas kryzelis NFT', '../../../assets/images/kryzius.png',0))
   }
 
   public pushProductId(id:number){

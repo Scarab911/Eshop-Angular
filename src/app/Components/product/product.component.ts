@@ -9,8 +9,7 @@ import { Item } from 'src/app/models/item';
 export class ProductComponent implements OnInit {
 
 @Input()
-public product?: Item;
-
+  public product?: Item;
 
 @Output()
 public pushId: EventEmitter<void>;
