@@ -1,10 +1,8 @@
 <header>
   <div class="cart">
-    <img
-      src="../assets/images/shopping-cart.png"
+    <img src="../assets/images/shopping-cart.png"
       alt="Cart"
-      (click)="showSelected()"
-    />
-    <div class="count">{{ getOrderCount }}</div>
+      (click)="showSelected()" />
+    <div class="count">{{ selectedProductsList.lenght }}</div>
   </div>
 </header>

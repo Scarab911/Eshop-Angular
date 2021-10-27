@@ -1,0 +1,10 @@
+<app-header [allProductsList]="allProductsList"
+    [selectedProductsIdList]="selectedProductsIdList">
+</app-header>
+
+<app-product *ngFor="let product of allProductsList"
+    [product]="product"
+    [allProcutsList]="allProcutsList"
+    (onAddToCart)="pushProductId(product.id)"
+    (onRemoveFromCart)="removeProductId(product.id)">
+</app-product>

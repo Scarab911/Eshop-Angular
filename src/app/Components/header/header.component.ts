@@ -9,27 +9,16 @@ import { Item } from 'src/app/models/item';
 export class HeaderComponent implements OnInit {
 
   @Input()
-  public allProductsList?: Item[];
+  public allProductsList!: Item[];
 
   @Input()
-  public selectedProductsIdList?: number[];
-
-  @Input()
-  public cartCount?:number=0;
+  public selectedProductsIdList!: number[];
 
   constructor() { 
   }
 
   ngOnInit(): void {
     
-  }
-
-  public get getOrderCount(): number{
-    let count=0;
-    this.allProductsList?.forEach((product)=>{
-      count+=product.count;
-    });
-    return count;
   }
 
   public showSelected(): void {

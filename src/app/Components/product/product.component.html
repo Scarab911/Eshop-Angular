@@ -1,28 +1,36 @@
 <div class="product-container">
   <div class="count">
-    {{ product?.count }}
+    {{ selectedProductsIdList.length }}
   </div>
 
-  <img [src]="product?.imgURL" alt="{{ product?.name }}" />
+  <img [src]="product?.imgURL"
+    alt="{{ product?.name }}" />
 
   <div class="product-info">
     <h3>{{ product?.name }}</h3>
     <p class="short-description">{{ product?.shortDesc }}</p>
   </div>
 
-  <div class="price">{{ product!.price }}$</div>
+  <div class="price"
+    *ngIf="product.discount === 0">{{ product!.price }}$</div>
 
-  <div class="price" *ngIf="product.discount > 0" [ngClass]="{
+  <div class="price"
+    *ngIf="product.discount > 0"
+    [ngClass]="{
       'red': product.discount > 0
     }">
     {{ product?.discountedPrice }} $
   </div>
 
-  <button class="add-product" (click)="product?.addItem()" (click)="pushId.emit()">
+  <button class="add-product"
+    (click)="onAddToCart.emit(product?.id)"
+    (click)="pushId.emit()">
     Add to cart
   </button>
 
-  <button class="remove-product" (click)="product?.removeItem()" [disabled]="product?.count === 0">
+  <button class="remove-product"
+    (click)="onRemoveFromCart.emit(product?.id)"
+    [disabled]="selectedProductsIdList.length === 0">
     Remove
   </button>
 </div>

@@ -2,17 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { ProductComponent } from './Components/product/product.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { ProductsComponent } from './Components/products/products.component';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { ProductsListComponent } from "./Components/products/products-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HeaderComponent,
-    ProductsComponent
+    DiscountPipe,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
